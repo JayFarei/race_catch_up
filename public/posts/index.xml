@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on .// Race_Catch_UP</title>
+    <link>https://racecatchup.com/posts/</link>
+    <description>Recent content in Posts on .// Race_Catch_UP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://racecatchup.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Coming soon</title>
+      <link>https://racecatchup.com/posts/hello/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://racecatchup.com/posts/hello/</guid>
+      <description>Rewatch the latest races in minutes, without missing any part of it. Keep up with any of the drivers to see the race unfold from their perspective.</description>
+    </item>
+    
+  </channel>
+</rss>
