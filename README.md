@@ -8,9 +8,9 @@ This page will take you through all of the steps required to have a live website
 
 	- [Static website using Hugo](#static-website-using-hugo)
 		- [Step by step instructions](#step-by-step-instructions)
-			- [1. Install git](#1-install-git)
-			- [2. Install [Atom](https://atom.io)](#2-install-atomhttpsatomio)
-			- [3. Install [Hugo](https://gohugo.io/getting-started/quick-start/)](#3-install-hugohttpsgohugoiogetting-startedquick-start)
+			- [Install git](#install-git)
+			- [2. Install Atom](#2-install-atom)
+			- [3. Install Hugo](#3-install-hugo)
 			- [4. Check the version of hugo](#4-check-the-version-of-hugo)
 			- [5. Obtain a custom domain on Godaddy](#5-obtain-a-custom-domain-on-godaddy)
 			- [6. Create a new site](#6-create-a-new-site)
@@ -33,19 +33,19 @@ This page will take you through all of the steps required to have a live website
 
 ### Step by step instructions
 
-#### 1. Install git
+#### Install git
 
 ```
 brew install git
 ```
 
-#### 2. Install [Atom](https://atom.io)
+#### 2. Install Atom
 
 ```
 brew cask install atom
 ```
 
-#### 3. Install [Hugo](https://gohugo.io/getting-started/quick-start/)
+#### 3. Install Hugo
 
 ```
 brew install hugo
