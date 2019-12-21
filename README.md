@@ -101,7 +101,7 @@ Open Atom and load the project folder
 
 Within Atom, navigate to `~/Dropbox/development/Static_Website` locate `config.toml` and copy the following configuration
 
-Ps. adjust the `baseurl` your godaddy custom domain
+Ps. adjust the `baseurl` to your godaddy custom domain
 
 ```
 baseurl = "<you godaddy custom domain>"
@@ -152,9 +152,17 @@ paginate = 5
 ```
 Save with `Cmd+S`
 
-#### 13. Set up your content layout folder
+#### 13. Set up your content folder
 
 Within `themes/terminal/exampleSite` you'll find a typical layout of the content expected by this template. You'll see that posts are simple markdown pages. That there is a folder name `post` --> go ahead and rename that `posts` to match your config. Then copy the entire content of the folder under `~/Dropbox/development/Static_Website/content`
+
+Alternatively do it from the Terminal
+```
+cp -a ~/dropbox/development/Static_Website/themes/terminal/exampleSite/. ~/Dropbox/development/Static_Website/content
+
+```
+
+*Tip*: whenever you are in a nested folder (always check the content with `ls`) - you can move to your parent folder with `cd -`
 
 #### 14. Test your set up
 
