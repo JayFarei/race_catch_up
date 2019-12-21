@@ -33,7 +33,11 @@ hugo version
 
 ```
 
-5. Create a new site
+5. Obtain a custom domain on Godaddy
+
+Go to [godaddy.com](godaddy.com) - find a domain you like and purchase it - leave the tab open as you'll need to configure the DNS at a latest step
+
+6. Create a new site
 
 Navigate to your development folder
 
@@ -45,37 +49,39 @@ Create the base folder for hugo
 hugo new site quickstart
 ```
 
-6. Rename your project folder
+7. Rename your project folder
 
 ```
 rmdir quickstart Static_Website
 ```
-7. Find a theme
+8. Find a theme
 
 In this case I am using [Terminal_theme](https://github.com/panr/hugo-theme-terminal.git)
 
-8. Navigate to your Hugo project
+9. Navigate to your Hugo project
 
 ```
 cd ~/dropbox/development/Static_Website
 ```
 
-9. Clone the repo in your theme folder
+10. Clone the repo in your theme folder
 
 ```
 git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
-10. Open the project folder in Atom
+11. Open the project folder in Atom
 
 Open Atom and load the project folder
 `~/Dropbox/development/Static_Website`
 
-10. Configure your hugo base
+12. Configure your hugo base
 
 Within Atom, navigate to `~/Dropbox/development/Static_Website` locate `config.toml` and copy the following configuration
 
+Ps. adjust the `baseurl` your godaddy custom domain
+
 ```
-baseurl = "/"
+baseurl = "<you godaddy custom domain>"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
@@ -123,11 +129,11 @@ paginate = 5
 ```
 Save with `Cmd+S`
 
-11. Set up your content layout folder
+13. Set up your content layout folder
 
 Within `themes/terminal/exampleSite` you'll find a typical layout of the content expected by this template. You'll see that posts are simple markdown pages. That there is a folder name `post` --> go ahead and rename that `posts` to match your config. Then copy the entire content of the folder under `~/Dropbox/development/Static_Website/content`
 
-12. Test your set up
+14. Test your set up
 
 You should now have a viable hugo static site.
 
@@ -145,7 +151,7 @@ Your site is now available locally at [http://localhost:1313/](http://localhost:
 
 Now any change you make in Atom to config or `.md` posts will be reflected live in your local server
 
-13. Set up your repo in Atom
+15. Set up your repo in Atom
 
 * Follow the instructions you see inside Atom’s GitHub tab. First, visit the [github.atom.io/](github.atom.io/) login URL and sign in to your GitHub account. Here, you can generate a token with which you can perform the authorization.
 
@@ -159,7 +165,7 @@ Now any change you make in Atom to config or `.md` posts will be reflected live 
 
 * You should now have an empty repository on Atom (as you have in Github.com)
 
-14. Export your hugo site and import it in the repository
+16. Export your hugo site and import it in the repository
 
 Navigate to your hugo base folder
 
@@ -197,14 +203,14 @@ You can do it manually - via terminal you can use the following command
 cp -a ~/dropbox/development/Static_Website/public/. ~/dropbox/development/RCU
 ```
 
-15. Commit your change
+17. Commit your change
 
 By opening the `git` tab you should see a lot of uncommitted changes - stage them / comment your commit and confirm.
 Finally - press Push.
 
 Note: You can select the branch in which you want to push your commit. If not - make sure that the branch is merged into master before the next step.
 
-16. Set up Github pages
+18. Set up Github pages
 
 * Go to your repository [github.com](github.com) - go to settings - scroll down to `Github Pages` - enter your custom domain - in my case is `racecatchup.com`
 > By doing so - Github will generate a file called `CNAME` in your master branch with the custom domain in it.
@@ -237,10 +243,10 @@ racecatchup.com.	600	IN	A	185.199.110.153
 ```
 It will take at least 30min to propagate, once it does - if you navigate to your domain you'll realise it misses HTTPS and does not render well or doesn't render at all.
 
-17. Enable HTTPS
+18. Enable HTTPS
 Go back to Github pages - and select the option `Enforce HTTPS`
 
 
-18. That is done
+19. That is done
 
 Now your site should be up and running, every time you merge a branch to your master - you are deploying a new version of the website
