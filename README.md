@@ -2,42 +2,68 @@
 
 This repository is a static website generated via Hugo, customised in atom, content generated in markdown in Atom, committed to github via Atom, redirected to a custom domain via Github pages.
 
-This page will take you through all of the steps required to have a live website on your custom domain.
+This page will take you through all of the steps required to have a live website on your custom domain following the above workflow.
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+	- [Static website using Hugo](#static-website-using-hugo)
+		- [Step by step instructions](#step-by-step-instructions)
+			- [1. Install git](#1-install-git)
+			- [2. Install [Atom](https://atom.io)](#2-install-atomhttpsatomio)
+			- [3. Install [Hugo](https://gohugo.io/getting-started/quick-start/)](#3-install-hugohttpsgohugoiogetting-startedquick-start)
+			- [4. Check the version of hugo](#4-check-the-version-of-hugo)
+			- [5. Obtain a custom domain on Godaddy](#5-obtain-a-custom-domain-on-godaddy)
+			- [6. Create a new site](#6-create-a-new-site)
+			- [7. Rename your project folder](#7-rename-your-project-folder)
+			- [8. Find a theme](#8-find-a-theme)
+			- [9. Navigate to your Hugo project](#9-navigate-to-your-hugo-project)
+			- [10. Clone the repo in your theme folder](#10-clone-the-repo-in-your-theme-folder)
+			- [11. Open the project folder in Atom](#11-open-the-project-folder-in-atom)
+			- [12. Configure your hugo base](#12-configure-your-hugo-base)
+			- [13. Set up your content layout folder](#13-set-up-your-content-layout-folder)
+			- [14. Test your set up](#14-test-your-set-up)
+			- [15. Set up your repo in Atom](#15-set-up-your-repo-in-atom)
+			- [16. Export your hugo site and import it in the repository](#16-export-your-hugo-site-and-import-it-in-the-repository)
+			- [17. Commit your change](#17-commit-your-change)
+			- [18. Set up Github pages](#18-set-up-github-pages)
+			- [18. Enable HTTPS](#18-enable-https)
+			- [19. That is done](#19-that-is-done)
+
+<!-- /TOC -->
 
 ### Step by step instructions
 
-1. Install git
+#### 1. Install git
 
 ```
 brew install git
 ```
 
-2. Install [Atom](https://atom.io)
+#### 2. Install [Atom](https://atom.io)
 
 ```
 brew cask install atom
 ```
 
-3. Install [Hugo](https://gohugo.io/getting-started/quick-start/)
+#### 3. Install [Hugo](https://gohugo.io/getting-started/quick-start/)
 
 ```
 brew install hugo
 
 ```
 
-4. Check the version of hugo
+#### 4. Check the version of hugo
 
 ```
 hugo version
 
 ```
 
-5. Obtain a custom domain on Godaddy
+#### 5. Obtain a custom domain on Godaddy
 
 Go to [godaddy.com](godaddy.com) - find a domain you like and purchase it - leave the tab open as you'll need to configure the DNS at a latest step
 
-6. Create a new site
+#### 6. Create a new site
 
 Navigate to your development folder
 
@@ -49,32 +75,32 @@ Create the base folder for hugo
 hugo new site quickstart
 ```
 
-7. Rename your project folder
+#### 7. Rename your project folder
 
 ```
 rmdir quickstart Static_Website
 ```
-8. Find a theme
+#### 8. Find a theme
 
 In this case I am using [Terminal_theme](https://github.com/panr/hugo-theme-terminal.git)
 
-9. Navigate to your Hugo project
+#### 9. Navigate to your Hugo project
 
 ```
 cd ~/dropbox/development/Static_Website
 ```
 
-10. Clone the repo in your theme folder
+#### 10. Clone the repo in your theme folder
 
 ```
 git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
-11. Open the project folder in Atom
+#### 11. Open the project folder in Atom
 
 Open Atom and load the project folder
 `~/Dropbox/development/Static_Website`
 
-12. Configure your hugo base
+#### 12. Configure your hugo base
 
 Within Atom, navigate to `~/Dropbox/development/Static_Website` locate `config.toml` and copy the following configuration
 
@@ -129,11 +155,11 @@ paginate = 5
 ```
 Save with `Cmd+S`
 
-13. Set up your content layout folder
+#### 13. Set up your content layout folder
 
 Within `themes/terminal/exampleSite` you'll find a typical layout of the content expected by this template. You'll see that posts are simple markdown pages. That there is a folder name `post` --> go ahead and rename that `posts` to match your config. Then copy the entire content of the folder under `~/Dropbox/development/Static_Website/content`
 
-14. Test your set up
+#### 14. Test your set up
 
 You should now have a viable hugo static site.
 
@@ -151,7 +177,7 @@ Your site is now available locally at [http://localhost:1313/](http://localhost:
 
 Now any change you make in Atom to config or `.md` posts will be reflected live in your local server
 
-15. Set up your repo in Atom
+#### 15. Set up your repo in Atom
 
 * Follow the instructions you see inside Atom’s GitHub tab. First, visit the [github.atom.io/](github.atom.io/) login URL and sign in to your GitHub account. Here, you can generate a token with which you can perform the authorization.
 
@@ -165,7 +191,7 @@ Now any change you make in Atom to config or `.md` posts will be reflected live 
 
 * You should now have an empty repository on Atom (as you have in Github.com)
 
-16. Export your hugo site and import it in the repository
+#### 16. Export your hugo site and import it in the repository
 
 Navigate to your hugo base folder
 
@@ -203,19 +229,19 @@ You can do it manually - via terminal you can use the following command
 cp -a ~/dropbox/development/Static_Website/public/. ~/dropbox/development/RCU
 ```
 
-17. Commit your change
+#### 17. Commit your change
 
 By opening the `git` tab you should see a lot of uncommitted changes - stage them / comment your commit and confirm.
 Finally - press Push.
 
 Note: You can select the branch in which you want to push your commit. If not - make sure that the branch is merged into master before the next step.
 
-18. Set up Github pages
+#### 18. Set up Github pages
 
 * Go to your repository [github.com](github.com) - go to settings - scroll down to `Github Pages` - enter your custom domain - in my case is `racecatchup.com`
 > By doing so - Github will generate a file called `CNAME` in your master branch with the custom domain in it.
 
-* Go back to [godaddy.com](godaddy.com) - go to manage your domain - DNM - and replicate the following set up:
+* Go back to [godaddy.com](godaddy.com) - go to manage your domain - DNS - and replicate the following set up:
 
 Type  | Hosts  | Points to          | TTL    | Seconds  |
 ------|:------:|:------------------:| :-----:|-------:  |
@@ -243,10 +269,10 @@ racecatchup.com.	600	IN	A	185.199.110.153
 ```
 It will take at least 30min to propagate, once it does - if you navigate to your domain you'll realise it misses HTTPS and does not render well or doesn't render at all.
 
-18. Enable HTTPS
+#### 18. Enable HTTPS
 Go back to Github pages - and select the option `Enforce HTTPS`
 
 
-19. That is done
+#### 19. That is done
 
 Now your site should be up and running, every time you merge a branch to your master - you are deploying a new version of the website
