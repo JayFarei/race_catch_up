@@ -4,36 +4,33 @@ This repository is a static website generated via Hugo, customised in atom, cont
 
 This page will take you through all of the steps required to have a live website on your custom domain following the above workflow.
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-	- [Static website using Hugo](#static-website-using-hugo)
-		- [Step by step instructions](#step-by-step-instructions)
-			- [Install git](#install-git)
-			- [2. Install Atom](#2-install-atom)
-			- [3. Install Hugo](#3-install-hugo)
-			- [4. Check the version of hugo](#4-check-the-version-of-hugo)
-			- [5. Obtain a custom domain on Godaddy](#5-obtain-a-custom-domain-on-godaddy)
-			- [6. Create a new site](#6-create-a-new-site)
-			- [7. Rename your project folder](#7-rename-your-project-folder)
-			- [8. Find a theme](#8-find-a-theme)
-			- [9. Navigate to your Hugo project](#9-navigate-to-your-hugo-project)
-			- [10. Clone the repo in your theme folder](#10-clone-the-repo-in-your-theme-folder)
-			- [11. Open the project folder in Atom](#11-open-the-project-folder-in-atom)
-			- [12. Configure your hugo base](#12-configure-your-hugo-base)
-			- [13. Set up your content layout folder](#13-set-up-your-content-layout-folder)
-			- [14. Test your set up](#14-test-your-set-up)
-			- [15. Set up your repo in Atom](#15-set-up-your-repo-in-atom)
-			- [16. Export your hugo site and import it in the repository](#16-export-your-hugo-site-and-import-it-in-the-repository)
-			- [17. Commit your change](#17-commit-your-change)
-			- [18. Set up Github pages](#18-set-up-github-pages)
-			- [18. Enable HTTPS](#18-enable-https)
-			- [19. That is done](#19-that-is-done)
-
-<!-- /TOC -->
+- [Static website using Hugo](#static-website-using-hugo)
+  - [Step by step instructions](#step-by-step-instructions)
+    - [1. Install git](#1-install-git)
+    - [2. Install Atom](#2-install-atom)
+    - [3. Install Hugo](#3-install-hugo)
+    - [4. Check the version of hugo](#4-check-the-version-of-hugo)
+    - [5. Obtain a custom domain on Godaddy](#5-obtain-a-custom-domain-on-godaddy)
+    - [6. Create a new site](#6-create-a-new-site)
+    - [7. Rename your project folder](#7-rename-your-project-folder)
+    - [8. Find a theme](#8-find-a-theme)
+    - [9. Navigate to your Hugo project](#9-navigate-to-your-hugo-project)
+    - [10. Clone the repo in your theme folder](#10-clone-the-repo-in-your-theme-folder)
+    - [11. Open the project folder in Atom](#11-open-the-project-folder-in-atom)
+    - [12. Configure your hugo base](#12-configure-your-hugo-base)
+    - [13. Set up your content layout folder](#13-set-up-your-content-layout-folder)
+    - [14. Test your set up](#14-test-your-set-up)
+    - [15. Set up your repo in Atom](#15-set-up-your-repo-in-atom)
+    - [16. Export your hugo site and import it in the repository](#16-export-your-hugo-site-and-import-it-in-the-repository)
+    - [17. Commit your change](#17-commit-your-change)
+    - [18. Set up Github pages](#18-set-up-github-pages)
+    - [18. Enable HTTPS](#18-enable-https)
+    - [19. That is done](#19-that-is-done)
 
 ### Step by step instructions
 
-#### Install git
+#### 1. Install git
 
 ```
 brew install git
