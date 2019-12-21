@@ -4,12 +4,12 @@ This repository is a static website generated via Hugo, customised in atom, cont
 
 This page will take you through all of the steps required to have a live website on your custom domain following the above workflow.
 
-Some resources:
+**Some resources:**
 * [hugo terminal theme](https://github.com/panr/hugo-theme-terminal.git)
 * [hugo](https://gohugo.io/getting-started/quick-start/)
 * [atom](https://atom.io)
 
-
+**Table of content**
 - [Static website using Hugo](#static-website-using-hugo)
   - [Step by step instructions](#step-by-step-instructions)
     - [1. Install git](#1-install-git)
