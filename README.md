@@ -147,7 +147,7 @@ Now any change you make in Atom to config or `.md` posts will be reflected live 
 
 13. Set up your repo in Atom
 
-* Connect Atom to Github - open git - you'll be asked to connect - go to [https://github.atom.io/](https://github.atom.io/) - obtain your access token - and log in to your github account
+* Follow the instructions you see inside Atom’s GitHub tab. First, visit the [github.atom.io/](github.atom.io/) login URL and sign in to your GitHub account. Here, you can generate a token with which you can perform the authorization.
 
 * Go to [github.com](github.com) - create a new repository (make it public)
 
@@ -166,7 +166,8 @@ Navigate to your hugo base folder
 ```
 cd ~/dropbox/development/Static_Website
 ```
-Once you are done drafting the content, delete the contents of public folder and run ```
+Once you are done drafting the content, delete the contents of public folder and run
+```
 hugo
 ```
 to regenerate the files in your hugo base public folder.
@@ -199,4 +200,47 @@ cp -a ~/dropbox/development/Static_Website/public/. ~/dropbox/development/RCU
 15. Commit your change
 
 By opening the `git` tab you should see a lot of uncommitted changes - stage them / comment your commit and confirm.
-Finally - press publish
+Finally - press Push.
+
+Note: You can select the branch in which you want to push your commit. If not - make sure that the branch is merged into master before the next step.
+
+16. Set up Github pages
+
+* Go to your repository [github.com](github.com) - go to settings - scroll down to `Github Pages` - enter your custom domain - in my case is `racecatchup.com`
+> By doing so - Github will generate a file called `CNAME` in your master branch with the custom domain in it.
+
+* Go back to [godaddy.com](godaddy.com) - go to manage your domain - DNM - and replicate the following set up:
+
+Type  | Hosts  | Points to          | TTL    | Seconds  |
+------|:------:|:------------------:| :-----:|-------:  |
+A     | @      | 185.199.108.153    | custom | 600s     |
+A     | @      | 185.199.109.153    | custom | 600s     |
+A     | @      | 185.199.110.153    | custom | 600s     |
+A     | @      | 185.199.111.153    | custom | 600s     |
+CNAME | www    | jayfarei.github.io | 1h     | N/A      |
+
+Delete any other records, leave Godaddy name servers.
+
+Verify your set up by checking with your terminal:
+
+```
+dig <custom_domain>.com
+```
+The outcome should confirm the following:
+
+```
+; ANSWER SECTION:
+racecatchup.com.	600	IN	A	185.199.111.153
+racecatchup.com.	600	IN	A	185.199.108.153
+racecatchup.com.	600	IN	A	185.199.109.153
+racecatchup.com.	600	IN	A	185.199.110.153
+```
+It will take at least 30min to propagate, once it does - if you navigate to your domain you'll realise it misses HTTPS and does not render well or doesn't render at all.
+
+17. Enable HTTPS
+Go back to Github pages - and select the option `Enforce HTTPS`
+
+
+18. That is done
+
+Now your site should be up and running, every time you merge a branch to your master - you are deploying a new version of the website
