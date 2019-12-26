@@ -197,7 +197,7 @@ Now any change you make in Atom to config or `.md` posts will be reflected live 
 
 * Select as destination your development folder (not the same folder as your hugo base) - in my case is `~/dropbox/development`
 
-* Copy and past the git URL from your repository `https://github.com/jayfarei/RCU.git`
+* Copy and past the git URL from your repository `https://github.com/JayFarei/race_catch_up.git`
 
 * You should now have an empty repository on Atom (as you have in Github.com)
 
@@ -236,7 +236,7 @@ Now the only thing left is to commit those files into your github repository
 You can do it manually - via terminal you can use the following command
 
 ```
-cp -a ~/dropbox/development/Static_Website/public/. ~/dropbox/development/RCU
+cp -a ~/dropbox/development/Static_Website/public/. ~/dropbox/development/race_catch_up
 ```
 
 #### 17. Commit your change
